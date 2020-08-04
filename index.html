@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Highkim0922</title>
-    </head>
-    <body>
-        <a href="https://weelleekid.github.io/">Highkim0922의 블로그</a>
-        <h1>this is my github page.</h1>
-    </body>
-</html>
+---
+layout: default
+title: Home
+---
+
+<!-- Posts Index
+================================================== -->
+<div class="blog-grid-container">
+    {% for post in paginator.posts %}
+        {% include postbox.html %}
+    {% endfor %}
+</div>
+
+<!-- Pagination
+================================================== -->
+<div class="bottompagination">
+<span class="navigation" role="navigation">
+    {% include pagination.html %}
+</span>
+</div>
+
